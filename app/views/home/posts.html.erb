@@ -1,0 +1,6 @@
+<h1><%= params[:blog] %></h1>
+
+<% @posts.each do |post| %>
+	<h2><%= post["title"] %></h2>
+	<p><%= post["body"].html_safe unless post["body"].nil? %></p>
+<% end %>
